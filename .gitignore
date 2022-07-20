@@ -1,1 +1,7 @@
+# configs
 .vscode/
+
+# build
+*.o
+*.hi
+*.exe
