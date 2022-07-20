@@ -59,6 +59,9 @@ sh> ghci
 GHCi, version 8.10.5: https://www.haskell.org/ghc/  :? for help
 Prelude> 5 / 2
 2.5
+
+Prelude> :q
+Leaving GHCi.
 ```
 
 ## Setup

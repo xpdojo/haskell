@@ -1,12 +1,13 @@
-import System.IO
+import System.Environment (getArgs)
+import System.IO (IOMode (ReadMode), hGetContents, openFile, hClose)
 
 main = do
-  handle <- openFile "../README.md" ReadMode
-  contents <- hGetContents handle
+  args <- getArgs
+  file <- openFile (head args) ReadMode
+  contents <- hGetContents file
   putStr contents
-  hClose handle
+  hClose file
 
 {-
-sh> ghci ReadFile.hs
-ghci> main
+sh> runhaskell ReadFile.hs ../.ghci
 -}
